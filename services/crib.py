@@ -12,7 +12,7 @@ def scrape(url):
     state = soup.find(attrs={ 'itemprop': 'addressRegion' })
     price = soup.find(attrs={ 'itemprop': 'price' })
 
-    full_name = address.text + ' ' + city.text + ' ' + state.text
+    full_name = address.text + ' ' + city.text + ', ' + state.text
 
     pictures = []
 

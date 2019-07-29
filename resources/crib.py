@@ -10,7 +10,7 @@ class Cribs(Resource):
         connection = sqlite3.connect('data.db')
         cursor = connection.cursor()
 
-        query = 'SELECT * FROM cribs WHERE id=?'
+        query = 'SELECT * FROM cribs WHERE user=?'
         results = cursor.execute(query, (user_id,))
         crib_list = list(results)
         formatted_cribs = []

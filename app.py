@@ -1,12 +1,14 @@
 from flask import Flask
 from flask_restful import Resource, Api
 from flask_jwt import JWT, jwt_required
+from flask_cors import CORS
 
 from security import authenticate, identity
 from resources.user import UserRegister
 from resources.crib import Crib, Cribs
 
 app = Flask(__name__)
+CORS(app)
 app.secret_key = 'darthvader21'
 api = Api(app)
 

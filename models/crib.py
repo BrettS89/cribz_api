@@ -25,7 +25,7 @@ class CribModel:
             'url': self.url,
             'name': self.name,
             'price': self.price,
-            'pictures': self.pictures,
+            'pictures': self.pictures.split('|'),
             'user': self.user
         }
 
